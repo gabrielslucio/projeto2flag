@@ -1,4 +1,6 @@
 import './App.css';
+import '../src/Styles/Reset.css';
+
 import Navbar from './Components/Navbar/Navbar';
 
 function App() {
