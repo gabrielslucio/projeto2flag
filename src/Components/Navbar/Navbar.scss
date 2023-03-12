@@ -1,5 +1,99 @@
 .app__navbar {
-    .app__navbar {
+    width: 100%;
+    height: 50px;
+    background: rgb(68,69,91);
+    background: linear-gradient(90deg, rgba(68,69,91,1) 0%, rgb(57, 57, 77) 35%, rgba(64,62,83,1) 100%);
+
+    .app__navbar-section {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+
+       
+
+        .app__navbar-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .app__navbar-logo {
+                margin-left: 20px;
+
+                button {
+                    border: none;
+                    background: transparent;
+
+                    color: #fff;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.2em;
+
+                    cursor: pointer;
+                }
+               
+               
+            }
+
+            .app__navbar-btns {
+                display: flex;
+                gap: 50px;
+
+                .app__navbar-btnlg {
+
+                    button {
+                        z-index: 1;
+                        height: 25px;
+                        width: 100px;
+                        border: none;
+                        outline: none;
+                        position: relative;
+                        border-radius: 5px;
+                        color: #fff;
+                        background: linear-gradient(90deg, rgba(99,106,249,1) 0%, rgba(142,109,240,1) 35%, rgba(192,105,228,1) 100%);
+
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        letter-spacing: 0.1em;
+                        
+
+                        cursor: pointer;
+                    }
+
+                    button:before {
+                        content: "";
+                        position: absolute;
+                        top: 1px;
+                        right: 1px;
+                        bottom: 1px;
+                        left: 1px;
+                        background-color: #000;
+                    }
+
+                    button::before {
+                        z-index: -1;
+                        content: "";
+                        position: absolute;
+                        top: 1px;
+                        right: 1px;
+                        bottom: 1px;
+                        left: 1px;
+                        background-color: #3E3C51;
+                        border-radius: 4px;
+                    }
+
+                  
+                   
+
+                }
+            }
+           
+        }
         
     }
 }

@@ -10,7 +10,7 @@ const Navbar = (props) => {
             <section className="app__navbar-section">
                 <div className="app__navbar-container">
                     <div className="app__navbar-logo">
-                        <h1>redzone gaming</h1>
+                        <button>redzone gaming</button>
                     </div>
                     <div className="app__navbar-btns">
                         <div className="app__navbar-btnlg">
