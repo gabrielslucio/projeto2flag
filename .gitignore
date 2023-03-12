@@ -23,7 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 *.css
-*.map.css
+*.css.map
 *.jpg
 *.jpeg
 *.png
