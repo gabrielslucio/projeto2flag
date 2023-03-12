@@ -1,5 +1,6 @@
 import React from "react";
 import LanguageSelect from "../../Functions/LanguageSelect";
+import UserLogin from "../../Functions/UserLogin/UserLogin";
 
 import './Navbar.css';
 
@@ -22,6 +23,10 @@ const Navbar = (props) => {
 
                         <div className="app__navbar-language">
                             <LanguageSelect language={props.language || 'pt'} onLanguageChange={props.onLanguageChange} />                           
+                        </div>
+
+                        <div className="app__navbar-user">
+                            <UserLogin />
                         </div>
                     </div>
                 </div>
