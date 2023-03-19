@@ -14,11 +14,16 @@ const Navbar = (props) => {
                     </div>
                     <div className="app__navbar-btns">
                         <div className="app__navbar-btnlg">
+                            <div className="app__btn-border">
                             <button type="button">Fazer login</button>
+                            </div>
                         </div>
                         
                         <div className="app__navbar-btntry">
-                            <button type="button">Experiment o Redzone Gaming</button>
+                            <div className="app__btn-border">
+                                <button type="button">Experimente o Redzone Gaming</button>
+                            </div>
+                            
                         </div>
 
                         <div className="app__navbar-language">

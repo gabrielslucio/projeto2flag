@@ -22,7 +22,10 @@ function LanguageSelect(props) {
   return (
     <div className="language-select" ref={ref}>
       <div className="icon-box" onClick={handleIconClick}>
+        <svg width="0" height="0">
         <TbWorld />
+        </svg>
+       
         <span>{languageState.toUpperCase()}</span>
         {showOptions ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
       </div>
