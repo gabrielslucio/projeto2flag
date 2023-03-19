@@ -1,5 +1,5 @@
 import React from "react";
-import LanguageSelect from "../../Functions/LanguageSelect";
+import LanguageSelect from "../../Functions/LanguageSelect/LanguageSelect";
 import UserLogin from "../../Functions/UserLogin/UserLogin";
 
 import './Navbar.css';
