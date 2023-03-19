@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import { TbWorld } from "react-icons/tb";
 import {MdKeyboardArrowDown, MdKeyboardArrowUp} from "react-icons/md";
 
 import './LanguageSelect.css';

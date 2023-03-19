@@ -1,8 +1,7 @@
 import React, {useState} from "react";
 
-import {AiOutlineUser, AiOutlineInfoCircle, AiOutlineQuestionCircle} from "react-icons/ai";
-import {FaGamepad} from "react-icons/fa";
-import {GiEntryDoor} from "react-icons/gi";
+import {AiOutlineUser} from "react-icons/ai";
+import {MdKeyboardArrowDown, MdKeyboardArrowUp} from "react-icons/md";
 
 import './UserLogin.css';
 
@@ -16,7 +15,8 @@ function UserLogin() {
     return (
         <div className="user-area">
             <div className="user-icon" onClick={handleIconClick}>
-                <AiOutlineUser />
+                <AiOutlineUser className="icon"/>
+                {showOptions ? <MdKeyboardArrowUp className="arrow-up" /> : <MdKeyboardArrowDown className="arrow-down"/>}
             </div>
             {showOptions && (
                 <table className="user-options">
@@ -24,29 +24,19 @@ function UserLogin() {
                         <tr>
                             <td>
                                 <button>
-                                    <AiOutlineInfoCircle />                                    
-                                    Sobre o RedZone
+                                    Criar conta
                                 </button>
                             </td>
                             <td>
                                 <button>
-                                    <FaGamepad />
-                                    Jogos e itens
+                                    FAQ
                                 </button>
                             </td>    
                             <td>
                                 <button>
-                                <AiOutlineQuestionCircle />
                                 Suporte
                                 </button>
                             </td>   
-                            <td>
-                                <button>
-                                <GiEntryDoor />
-                                Fazer login
-                                </button>
-                            </td>
-
                         </tr>
                     </tbody>
                 </table>

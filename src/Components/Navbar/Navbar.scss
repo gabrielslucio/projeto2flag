@@ -1,8 +1,8 @@
 .app__navbar {
     width: 100%;
     height: 50px;
-    background: rgb(68,69,91);
-    background: linear-gradient(90deg, rgba(68,69,91,1) 0%, rgb(57, 57, 77) 35%, rgba(64,62,83,1) 100%);
+    background: rgb(9,15,22);
+    background: linear-gradient(90deg, rgba(9,15,22,1) 0%, rgb(4, 7, 10) 35%, rgb(7, 10, 14) 100%);
 
     .app__navbar-section {
         width: 100%;
@@ -11,7 +11,7 @@
         display: flex;
 
         .app__navbar-container {
-            width: 100%;
+            width: 97%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -31,6 +31,10 @@
                     letter-spacing: 0.2em;
 
                     cursor: pointer;
+                }
+
+                span {
+                    color: #FF4655;
                 }
                
                
@@ -238,7 +242,7 @@
                 font-family: 'Roboto', sans-serif;
                 font-weight: 500;
                 color: #fff;
-                
+
                 cursor: pointer;
                 }
                
