@@ -22,24 +22,20 @@ function LanguageSelect(props) {
   return (
     <div className="language-select" ref={ref}>
       <div className="icon-box" onClick={handleIconClick}>
-        <svg width="0" height="0">
-        <TbWorld />
-        </svg>
-       
         <span>{languageState.toUpperCase()}</span>
-        {showOptions ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+        {showOptions ? <MdKeyboardArrowUp className="arrow-up" /> : <MdKeyboardArrowDown className="arrow-down" />}
       </div>
 
       {showOptions && (
         <table className="language-options">
-          <tbody>
-            <tr>
-              <td>
+          <tbody className="tbody">
+            <tr className="tr">
+              <td className="td">
                 <button onClick={() => handleLanguageChange("pt")}>
                   PT
                 </button>
               </td>
-              <td>
+              <td className="td">
                 <button onClick={() => handleLanguageChange("en")}>
                   EN
                 </button>
