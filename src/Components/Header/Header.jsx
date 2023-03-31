@@ -26,7 +26,7 @@ const Header = () => {
                         <input 
                             className="app__input"
                             type="text"
-                            placeholder="Procura por um champion..."
+                            placeholder="Procura por um campeão..."
                             required
                         />
                          

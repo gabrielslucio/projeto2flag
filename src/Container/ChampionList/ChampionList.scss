@@ -1,0 +1,59 @@
+.app__championlist {
+    margin: 20px;
+    padding: 20px;
+
+    .app__championlist-container {
+        
+        background: rgba(9, 15, 22, 0.9);
+        border: 3px solid #FF4655;
+
+
+        width: 300px;
+        height: 400px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 15px;
+
+        .app__champion-image {
+           
+            img {
+                width: 200px;
+                height: 200px;
+
+                border: 3px solid #FF4655;
+                border-radius: 100px;
+                object-fit: cover;
+            }
+
+        }
+
+        .app__champion-name {
+
+            a {
+                color: #fff;
+                font-family: 'Roboto', sans-serif;
+                font-size: 3rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+
+        .app__champion-role {
+            font-family: 'Roboto', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            color: #fff;
+        }
+
+        .app__champion-tier {
+            .tier-icon {
+                font-size: 3rem;
+                color: #fff;
+            }
+        }
+    }
+}
