@@ -4,6 +4,10 @@
     background: rgb(9,15,22);
     background: linear-gradient(90deg, rgba(9,15,22,1) 0%, rgb(4, 7, 10) 35%, rgb(7, 10, 14) 100%);
 
+    position: fixed;
+    top: 0;
+
+    z-index: 10000;
     .app__navbar-section {
         width: 100%;
         height: 100%;

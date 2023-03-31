@@ -1,4 +1,4 @@
-import backgroundvid from './../Assets/backgroundvid.mp4'
+import backgroundvid from './../Assets/Video/videolol.mp4'
 
 export default {
     backgroundvid
