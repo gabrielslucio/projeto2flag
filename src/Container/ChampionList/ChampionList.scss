@@ -1,105 +1,98 @@
 .app__championlist {
     margin: 30px;
     padding: 30px;
-
     display: grid;
-
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
-
     grid-row-gap: 90px;
-
     justify-items: center;
-
-    .app__champion-header {
-        grid-row: 1;
-        grid-column: span 6;
-
-        width: 100%;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        h1 {
-            color: #fff;
-            font-family: 'Roboto', sans-serif;
-            font-size: 2rem;
-            font-weight: 500;
-
-            text-transform: uppercase;
-
-
-            span {
-                color: #FF4655;
-            }
-
-        }
-        
+  }
+  
+  .app__champion-header {
+    grid-row: 1;
+    grid-column: span 6;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    h1 {
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      font-size: 2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+  
+      span {
+        color: #FF4655;
+      }
     }
+  }
+  
+  .app__championlist-container {
+    position: relative;
+    background: #090f16e6;
+    border: 3px solid #FF4655;
+    border-radius: 15px;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0px 0px 0px #FF4655;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .app__champion-image {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    opacity: 0.3;
+  
+    a {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  
+    img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+  }
+  
+  .app__champion-tooltip {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    gap: 40px;
+  
+    span {
+      padding: 0.5rem;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  }
+  
+  
+  .app__champion-image:hover {
+    opacity: 1;
+  }
+  
+  .app__championlist-container:hover > .app__champion-tooltip {
+    display: flex;
     
-    .app__championlist-container {
-        
-        background: #090f16e6;
-        border: 3px solid #FF4655;
-        border-radius: 15px;
-
-        width: 200px;
-        height: 300px;
-
-      
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        gap: 20px;
-
-        box-shadow: 0px 0px 0px #FF4655;
-
-        .app__champion-image {
-           
-            img {
-                width: 150px;
-                height: 150px;
-
-                border: 3px solid #FF4655;
-                border-radius: 100px;
-                object-fit: cover;
-            }
-
-        }
-
-        .app__champion-name {
-
-            a {
-                color: #fff;
-                font-family: 'Roboto', sans-serif;
-                font-size: 1.5rem;
-                font-weight: 600;
-                text-decoration: none;
-                text-transform: uppercase;
-
-                transition: 0.3s ease-in-out;
-                
-            }
-
-            a:hover {
-                color: #FF4655;
-            }
-
-        }
-
-        .app__champion-role {
-            font-family: 'Roboto', sans-serif;
-            text-transform: uppercase;
-            font-size: 0.7rem;
-            font-weight: 200;
-            color: #fff;
-        }
-    }
-
-    .app__championlist-container:hover {
-        box-shadow: 0px 0px 20px #FF4655;
-    }
-}
+  }
