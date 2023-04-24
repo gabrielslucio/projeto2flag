@@ -1,8 +1,11 @@
 import React from "react";
 
 import champion from "../../Constants/champion.json";
+import championImages from "../../Constants/championImages";
 
 import './ChampionList.css';
+
+
 
 const ChampionList = () => {
 
@@ -11,14 +14,15 @@ const ChampionList = () => {
              <div className="app__champion-header">
                 <h1>Escolhe um campeão para <span>estatísticas</span> e <span>counters</span></h1>
             </div>
-            {Object.keys(champion.data).map((id) => (
+            {Object.keys(champion.data).map((id, index) => (
                 <section className="app__championlist-container" key={id}>                   
-                    <a href={`#${champion.data[id].name.toLowerCase().replace(/ /g, '-')}`}>
+                    <a href={`${champion.data[id].name.toLowerCase().replace(/ /g, '-')}`}>
                         <div className="app__champion-image">
-                        <img 
-                            src={require(`../../Assets/Ahri_0.jpg`)}
+
+                            <img 
+                            src={championImages[index]}
                             alt={`${champion.data[id].name} icon image`}
-                        />
+                            />
                         </div>
                     </a>
 
