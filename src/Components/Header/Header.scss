@@ -1,12 +1,12 @@
 .app__header {
     width: 100%;
-    height: 500px;
+    height: 800px;
 
     border-bottom: 1px solid #FF4655;
     .app__header-container {
 
         display: grid;    
-        grid-template-rows: 200px 100px; 
+        grid-template-rows: 200px 100px 100px; 
 
         .app__header-vid {
             width: 100%;
@@ -17,11 +17,9 @@
 
             video {
                 width: 100%;
-                height: 500px;
+                height: 800px;
                 object-fit: cover;
                 filter: opacity(10%);
-
-                
             }
             
         }
@@ -29,21 +27,17 @@
         .app__header-searchbar{
             z-index: 999;
 
-            
             width: 100%;
-            height: 100px;
             
+            grid-column: 1;
+            grid-row: 4;
+
             display: flex;
             justify-content: center;
 
-            grid-column: 1;
-            grid-row: 2;
-            
-
-            
             .app__sform {
-               width: 600px;
-               max-width: 700px;
+               
+               width: 1000px;
                background: rgba(255, 255, 255, 0.2);
                border-radius: 60px;
                padding: 10px 20px;
