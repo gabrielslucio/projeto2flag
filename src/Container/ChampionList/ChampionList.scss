@@ -50,6 +50,10 @@
     height: 500px;
     border-radius: 15px;
     opacity: 0.3;
+
+    object-fit: cover;
+
+    transition: 0.2s ease-in-out;
   
     a {
       width: 100%;

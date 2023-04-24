@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import LanguageSelect from "../../Functions/LanguageSelect/LanguageSelect";
 import UserLogin from "../../Functions/UserLogin/UserLogin";
 
 import './Navbar.css';
@@ -31,13 +30,6 @@ const Navbar = (props) => {
                                 <button type="button">Experimente o Redzone Gaming</button>
                             </div>
                             
-                        </div>
-
-                        <div className="app__navbar-language">
-                        <LanguageSelect
-                            language={props.language || "pt"}
-                            onLanguageChange={props.onLanguageChange}
-                        />                        
                         </div>
 
                         <div className="app__navbar-user">
