@@ -12,7 +12,7 @@ const ChampionList = () => {
     return (
         <div className="app__championlist">
              <div className="app__champion-header">
-                <h1>Escolhe um campeão para <span>estatísticas</span> e <span>counters</span></h1>
+                <h1>Escolhe um campeão para <span>guias</span> e <span>estatísticas</span></h1>
             </div>
             {Object.keys(champion.data).map((id, index) => (
                 <section className="app__championlist-container" key={id}>                   
