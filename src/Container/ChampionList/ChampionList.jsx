@@ -5,11 +5,6 @@ import championImages from "../../Constants/championImages";
 import "./ChampionList.css";
 
 const ChampionList = () => {
-  const navigate = useNavigate();
-
-  const handleChampionClick = (id) => {
-    navigate(`/champion/${id.toLowerCase()}`);
-  };
 
   return (
     <div className="app__championlist">
