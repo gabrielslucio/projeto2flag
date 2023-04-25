@@ -10,24 +10,7 @@ import ChampionPage from './Pages/ChampionPage/ChampionPage';
 
 import './App.css';
 import '../src/Styles/Reset.css';
-
-/*
-function App() {
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <Navbar />
-        <Header />
-        <ChampionList />
-        <Routes>
-          <Route path="/campeao/:id" element={<ChampionPage />} />
-        </Routes>
-        <Footer />
-      </div>
-    </BrowserRouter>
-  );
-}
-*/
+import ScrollTop from './Functions/ScrollTop/ScrollTop';
 
 function App() {
   
@@ -35,6 +18,7 @@ function App() {
       <BrowserRouter>
       <div className="App">
       <Navbar />
+      <ScrollTop />
         <Routes>
           <Route index path="/" element={ <Home /> } />
           <Route exact path="/campeao/:id" element={ <ChampionPage /> } />
