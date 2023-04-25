@@ -1,3 +1,56 @@
-.app__test {
-    height: 400px;
+.app__champion-page {
+    margin-top: 100px;
+    padding: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .app__champion-container {
+        width: 1300px;
+        height: 300px;
+
+        background-color: #03050785;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .app__champion-banner {
+            height: 250px;
+            overflow: hidden;
+    
+            .app__champion-info {
+    
+                h1 {
+                    color: white;
+                }
+            }
+    
+            .app__champion-views {
+    
+            }
+    
+            .app__champion-comments {
+    
+            }
+    
+            .app__champion-img {
+                
+                
+               img {
+                
+                width: 1047px;
+                height: 400px;
+                object-fit: cover;
+    
+                
+               
+               }
+            }
+        }
+    }
+    
+
 }
