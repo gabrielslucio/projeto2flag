@@ -20,6 +20,7 @@
         .app__champion-banner {
             height: 250px;
             overflow: hidden;
+            
     
             .app__champion-info {
     
@@ -36,21 +37,19 @@
     
             }
     
-            .app__champion-img {
+           
                 
+                .app__champion-img {
                 
-               img {
-                
-                width: 1047px;
-                height: 400px;
-                object-fit: cover;
-    
-                
-               
-               }
-            }
+                    img {
+                     width: 1047px;
+                     height: 400px;
+                     object-fit: cover;
+                    }
+                 }
+
+            
+           
         }
     }
-    
-
 }

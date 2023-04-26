@@ -26,25 +26,10 @@ const ChampionPage = () => {
         <section className="app__champion-page">
             <div className="app__champion-container">
             <div className="app__champion-banner">
-               { /* <div className="app__champion-info">
-                        <h1>{championName} guia por <span>Gabriel</span></h1>
-                        <p>UPDATED EM ABRIL 25, 2023</p>
-                        <BsFillArrowUpCircleFill />
-                        <BsFillArrowDownCircleFill />
-
-                        <div className="app__champion-views">
-                            <BsEyeFill />
-                            <p>30,000 visualizações</p>
-                        </div>
-
-                        <div className="app__champion-comments">
-                            <BsChatDotsFill />
-                            <p>6 comentários</p>
-                        </div>
-                </div> */}
-
-                <div className="app__champion-img">
-                    <img src={championImages[index]} alt={championId} />
+                <div className="app__teste">
+                    <div className="app__champion-img">
+                        <img src={championImages[index]} alt={championId} />
+                    </div>
                 </div>
             </div>
             </div>

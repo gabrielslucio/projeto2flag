@@ -14,6 +14,14 @@ const ChampionList = () => {
           <span>estatísticas</span>
         </h1>
       </div>
+      <div>
+      <NavLink
+          className="app__championlist-guide"
+          to={`/guias-todos`}
+          >
+            Ver todos os guias
+          </NavLink>
+      </div>
       {Object.keys(champion.data).map((id, index) => (
         <NavLink
           className="app__championlist-container"
