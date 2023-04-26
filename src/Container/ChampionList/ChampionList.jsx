@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import champion from "../../Constants/champion.json";
 import championImages from "../../Constants/championImages";
 import "./ChampionList.css";
@@ -8,20 +8,23 @@ const ChampionList = () => {
 
   return (
     <div className="app__championlist">
+
       <div className="app__champion-header">
         <h1>
           Escolhe um campeão para <span>guias</span> e{" "}
           <span>estatísticas</span>
         </h1>
-      </div>
-      <div>
-      <NavLink
-          className="app__championlist-guide"
+        <NavLink
+          className="app__champion-link"
           to={`/guias-todos`}
           >
             Ver todos os guias
           </NavLink>
       </div>
+
+      
+
+
       {Object.keys(champion.data).map((id, index) => (
         <NavLink
           className="app__championlist-container"
