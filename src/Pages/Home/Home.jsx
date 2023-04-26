@@ -11,7 +11,6 @@ function Home() {
         <Navbar />
         <Header />
         <ChampionList />
-        <Footer />
         </>
     );
 }

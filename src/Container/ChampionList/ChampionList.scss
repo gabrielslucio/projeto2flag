@@ -8,6 +8,8 @@
   }
   
   .app__champion-header {
+    margin-top: 50px;
+    margin-bottom: 30px;
     grid-row: 1;
     grid-column: span 6;
     width: 100%;
@@ -18,7 +20,7 @@
     justify-content: center;
     align-items: center;
 
-    gap: 40px;
+    gap: 70px;
   
     h1 {
       color: #fff;
