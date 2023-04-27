@@ -53,13 +53,15 @@
 
                 .app__navbar-btnlg {
 
+
                    .app__btn-border {
                    
                         position: relative;
                         width: fit-content;
                         height: fit-content;
                  
-                        button {
+                       a {
+                            text-decoration: none;
                             text-transform: uppercase;
                             font-family: 'Roboto', sans-serif;
                             color: white;
@@ -80,13 +82,13 @@
                             z-index: 1;
                         }
                        
-                       button:hover {
+                       a:hover {
                             border: 1px solid #FF4655;
                             color: white;
                             background-position: 40%;
                        }
                        
-                       button:before {
+                       a:before {
                             content: "";
                             position: absolute;
                             background-color: #0E1822;
@@ -97,15 +99,15 @@
                             transition: background-color 0.15s ease-in-out;
                        }
                        
-                       button:hover:before {
+                       a:hover:before {
                         background-color: white;
                        }
                        
-                       button:hover:after {
+                       a:hover:after {
                         background-color: white;
                        }
                        
-                       button:after {
+                       a:after {
                             content: "";
                             position: absolute;
                             background-color: #FF4655;
@@ -122,9 +124,9 @@
                         content: "";
                         position: absolute;
                         width: calc(100% + 0.5em);
-                        height: 50%;
+                        height: 20px;
                         left: -0.3em;
-                        top: -0.3em;
+                        top: -1em;
                         border: 1px solid #0E1822;
                         border-bottom: 0px;
                        
@@ -134,9 +136,9 @@
                         content: "";
                         position: absolute;
                         width: calc(100% + 0.5em);
-                        height: 50%;
+                        height: 20px;
                         left: -0.3em;
-                        bottom: -0.3em;
+                        bottom: -1em;
                         border: 1px solid #0E1822;
                         border-top: 0px;
                         z-index: 0;

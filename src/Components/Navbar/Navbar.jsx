@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import React from "react";
+import {NavLink} from "react-router-dom";
 import UserLogin from "../../Functions/UserLogin/UserLogin";
 
 import './Navbar.css';
@@ -15,13 +16,23 @@ const Navbar = (props) => {
 
                     <div className="app__navbar-btnlg">
                             <div className="app__btn-border">
-                            <button type="button">Criar conta</button>
+                            <NavLink 
+                                className="app__cc"
+                                to="/criar-conta"
+                            >
+                                Criar conta
+                            </NavLink>
                             </div>
                         </div>
 
                         <div className="app__navbar-btnlg">
                             <div className="app__btn-border">
-                            <button type="button">Fazer login</button>
+                            <NavLink 
+                                className="app__cc"
+                                to="/criar-conta"
+                            >
+                                Fazer login
+                            </NavLink>
                             </div>
                         </div>
                         
