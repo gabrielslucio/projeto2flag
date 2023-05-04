@@ -29,7 +29,7 @@ const Navbar = (props) => {
                             <div className="app__btn-border">
                             <NavLink 
                                 className="app__cc"
-                                to="/criar-conta"
+                                to="/login"
                             >
                                 Fazer login
                             </NavLink>

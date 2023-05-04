@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import videos from "../../Constants/videos";
-import champion from "../../Constants/champion.json";
 import { AiOutlineSearch } from "react-icons/ai";
 import "./Header.css";
 
