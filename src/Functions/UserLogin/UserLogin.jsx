@@ -5,9 +5,11 @@ import {MdKeyboardArrowDown, MdKeyboardArrowUp} from "react-icons/md";
 
 
 import './UserLogin.css';
+import { NavLink } from "react-router-dom";
 
 function UserLogin() {
     const [showOptions, setShowOptions] = useState(false);
+    const isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn"));
 
     const handleIconClick = () => {
         setShowOptions(!showOptions);
@@ -24,9 +26,9 @@ function UserLogin() {
                     <tbody>
                         <tr>
                             <td>
-                                <button>
-                                    Criar conta
-                                </button>
+                                <NavLink className="app__conta" to="/minha-conta">
+                                    {isLoggedIn ? 'Minha Conta' : 'Criar conta'}
+                                </NavLink>
                             </td>
                             <td>
                                 <button>
