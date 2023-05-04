@@ -23,7 +23,7 @@ DOCUMENTAÇÃO CÓDIGO - useNavigate
 
 const CreateAccount = () => {
 
-    const [name, setName] = useState('');
+    const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [accountCreated, setAccountCreated] = useState(false);
@@ -32,9 +32,9 @@ const CreateAccount = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const userData = { name, email, password };
+        const userData = { username, email, password };
         localStorage.setItem('user', JSON.stringify(userData));
-        setName('');
+        setUsername('');
         setPassword('');
         setEmail('');
         setAccountCreated(true);
@@ -55,20 +55,24 @@ const CreateAccount = () => {
                 <div className="app__create-acc-header">
                     <h1>Cria uma <span>conta</span></h1>
                 </div>
+
+
                 <div className="app__create-list">
                     {accountCreated && (
                         <div className="app__alert">
                             <p>Conta criada com sucesso</p>
                         </div>
                     )}
+
+
                     <form className="app__create-form" onSubmit={handleSubmit}>
                         <label>
-                            Nome:
+                            Username:
                         </label>
                         <input 
                             type="text"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)} 
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)} 
                             required   
                         />
 
@@ -92,11 +96,11 @@ const CreateAccount = () => {
                         />
                         <div className="app__btn-lg-cr">
                             <button className="btn-create" type="submit">
-                            Criar conta
-                        </button>                        
-                        <NavLink className="link-log-in" to="">
-                            Fazer Log In
-                        </NavLink>
+                                Criar conta
+                            </button>                        
+                            <NavLink className="link-log-in" to="/login">
+                                Fazer Log In
+                            </NavLink>
                         </div>
                     </form>                    
                 </div>                
