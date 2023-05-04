@@ -26,9 +26,12 @@ function UserLogin() {
                     <tbody>
                         <tr>
                             <td>
-                                <NavLink className="app__conta" to="/minha-conta">
-                                    {isLoggedIn ? 'Minha Conta' : 'Criar conta'}
-                                </NavLink>
+                            <NavLink
+                                className="app__conta"
+                                to={isLoggedIn ? "/minha-conta" : "/criar-conta"}
+                            >
+                                {isLoggedIn ? "Minha Conta" : "Criar conta"}
+                            </NavLink>
                             </td>
                             <td>
                                 <button>
