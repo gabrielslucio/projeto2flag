@@ -80,6 +80,7 @@
             grid-template-rows: 50px 1fr 1fr 50px;            
             row-gap: 20px;
             justify-items: center;
+            align-items: center;
 
             border: 1px solid #315375;
             background-color: #0E1822;
@@ -268,7 +269,12 @@
     }
 
     .app__view-guides {
-        grid-row: 4;
+       width: 100%;
+       margin-bottom: 20px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       gap: 20px;
 
         button{
             text-decoration: none;

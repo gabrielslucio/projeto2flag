@@ -118,8 +118,10 @@ const MyAccount = () => {
                     </div>
 
                     <div className="app__view-guides">
-                        <button>Ver guias</button>
+                        <button>Ver todos os guias</button>
+                        <button>Criar guia</button>
                     </div>
+                    
                 </div>                
             </div>
 
