@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {AiOutlineClose} from "react-icons/ai";
+import { BsFillArrowUpCircleFill, BsFillArrowDownCircleFill } from "react-icons/bs";
 
 import './MyAccount.css';
 
@@ -68,11 +69,57 @@ const MyAccount = () => {
                     )}
                     
                     <button onClick={handleChooseImageClick}>Escolher nova imagem</button>
+                    <button>Editar Perfil</button>
                 </div>
 
                 <div className="app__profile-user">
-                    <h2>Os meus guias</h2>
-                    <button>Ver guias</button>
+                    <div className="app__guide-header">
+                        <h2>Os meus <span>guias</span></h2>
+                    </div>
+
+                    <div className="app__guides">
+                <div className="app__votes">
+                    <BsFillArrowUpCircleFill className="arrowup" />
+                    <span className="upvote">22</span>
+                    <p>Votos</p>
+                    <span className="downvote">8</span>
+                    <BsFillArrowDownCircleFill className="arrowdown" />
+                    <button>Editar</button>
+                </div>
+
+                <div className="app__champion-icon">
+                    <img src={images.aatrox} alt="" />
+                </div>
+
+                <div className="app__guide-info">
+                    <h2>Aatrox Top - "O melhor guia de todos"</h2>
+                    <p>Guia criado por <span>{currentUser.username}</span> - updated a Abril 26, 2023</p>
+                </div>
+                    </div>
+
+                    <div className="app__guides">
+                        <div className="app__votes">
+                            <BsFillArrowUpCircleFill className="arrowup" />
+                            <span className="upvote">100</span>
+                            <p>Votos</p>
+                            <span className="downvote">4</span>
+                            <BsFillArrowDownCircleFill className="arrowdown" />
+                            <button>Editar</button>
+                        </div>
+
+                        <div className="app__champion-icon">
+                            <img src={images.soraka} alt="" />
+                        </div>
+
+                        <div className="app__guide-info">
+                            <h2>Soraka Top - "Um guia ainda melhor"</h2>
+                            <p>Guia criado por <span>{currentUser.username}</span> - updated a Abril 26, 2023</p>
+                        </div>
+                    </div>
+
+                    <div className="app__view-guides">
+                        <button>Ver guias</button>
+                    </div>
                 </div>                
             </div>
 
