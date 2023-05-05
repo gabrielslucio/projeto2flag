@@ -1,5 +1,5 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import UserLogin from "../../Functions/UserLogin/UserLogin";
 
 import './Navbar.css';
@@ -18,9 +18,14 @@ DOCUMENTAÇÃO DE CÓDIGO PARA FAZER CONDITIONAL RENDER A ITEMS UTILIZANDO A LOC
 const Navbar = () => {
     const isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn"));
 
+    const navigate = useNavigate();
+
     const handleLogoutClick = () => {
         localStorage.setItem("isLoggedIn", JSON.stringify(false));
-        window.location.reload(); //para dar reload na página
+
+        setTimeout(() => {
+            navigate(`/`);
+        }, 1000);
     }
 
     return(
