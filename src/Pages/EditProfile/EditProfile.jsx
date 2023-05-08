@@ -12,9 +12,12 @@ const EditProfile = () => {
     const [showUsernameModal, setShowUsernameModal] = useState(false);
     const [newPassword, setNewPassword] = useState("");
     const [showPasswordModal, setShowPasswordModal] = useState(false);
+    const [newEmail, setNewEmail] = useState("");
+    const [showEmailModal, setShowEmailModal] = useState(false);
 
     const currentUser = JSON.parse(localStorage.getItem('user'));
-    const currentPassword = JSON.parse(localStorage.getItem('user'))
+    const currentPassword = JSON.parse(localStorage.getItem('user'));
+    const currentEmail = JSON.parse(localStorage.getItem('user'));
 
     const handleChooseImageClick = () => {
         setShowModal(true);
@@ -51,6 +54,14 @@ const EditProfile = () => {
         setShowPasswordModal(false);
     }
 
+    const handleOpenEmailModal = () => {
+        setShowEmailModal(true);
+    }
+
+    const handleCloseEmailModal = () => {
+        setShowEmailModal(false);
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -65,6 +76,14 @@ const EditProfile = () => {
         const updatedPassword = { ...currentPassword, password: newPassword };
         localStorage.setItem("user", JSON.stringify(updatedPassword));
         handleClosePasswordModal();
+    }
+
+    const handleEmailSubmit = (event) => {
+        event.preventDefault();
+
+        const updatedEmail = { ...currentEmail, email: newEmail };
+        localStorage.setItem("user", JSON.stringify(updatedEmail));
+        handleCloseEmailModal();
     }
 
     useEffect(() => {
@@ -122,7 +141,7 @@ const EditProfile = () => {
                     <div className="app__cms-p-btns">
                         <button onClick={handleOpenUsernameModal}>Alterar username</button>
                         <button onClick={handleOpenPasswordModal}>Alterar password</button>
-                        <button>Alterar email</button>
+                        <button onClick={handleOpenEmailModal}>Alterar email</button>
                     </div>
                 </div>
 
@@ -217,6 +236,32 @@ const EditProfile = () => {
                 </div>
             </div>
         )}
+
+        {showEmailModal && (
+            <div className="modal-email">
+                <div className="modal-email-content">
+                    <div className="modal-email-header">
+                        <div className="ghost"></div>
+                        <h3>Altere o seu <span>email</span></h3>
+                        <div className="modal-btn-close">
+                            <button onClick={handleCloseEmailModal} type="button"><AiOutlineClose /></button>
+                        </div>
+                    </div>
+
+                    <div className="modal-email-container">
+                            <form onSubmit={handleEmailSubmit}>
+                                <h4>Email antigo: <span>{currentUser.email}</span></h4>
+                                <label htmlFor="new-username">
+                                    Novo email
+                                </label>
+                                <input type="email" id="new-username" value={newEmail} onChange={(e) => setNewEmail(e.target.value)} />
+                                <button type="submit">Alterar</button>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        )}
+
         
 
        </section>
