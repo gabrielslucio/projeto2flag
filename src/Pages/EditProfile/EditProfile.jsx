@@ -10,8 +10,11 @@ const EditProfile = () => {
     const [selectedImage, setSelectedImage] = useState(localStorage.getItem('selectedImage') || null);
     const [newUsername, setNewUsername] = useState("");
     const [showUsernameModal, setShowUsernameModal] = useState(false);
+    const [newPassword, setNewPassword] = useState("");
+    const [showPasswordModal, setShowPasswordModal] = useState(false);
 
     const currentUser = JSON.parse(localStorage.getItem('user'));
+    const currentPassword = JSON.parse(localStorage.getItem('user'))
 
     const handleChooseImageClick = () => {
         setShowModal(true);
@@ -40,12 +43,28 @@ const EditProfile = () => {
         setShowUsernameModal(false);
     }
 
+    const handleOpenPasswordModal = () => {
+        setShowPasswordModal(true);
+    }
+
+    const handleClosePasswordModal = () => {
+        setShowPasswordModal(false);
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault();
 
         const updatedUser = { ...currentUser, username: newUsername };
         localStorage.setItem("user", JSON.stringify(updatedUser));
         handleCloseUsernameModal();
+    }
+
+    const handlePasswordSubmit = (event) => {
+        event.preventDefault();
+
+        const updatedPassword = { ...currentPassword, password: newPassword };
+        localStorage.setItem("user", JSON.stringify(updatedPassword));
+        handleClosePasswordModal();
     }
 
     useEffect(() => {
@@ -102,7 +121,7 @@ const EditProfile = () => {
 
                     <div className="app__cms-p-btns">
                         <button onClick={handleOpenUsernameModal}>Alterar username</button>
-                        <button>Alterar password</button>
+                        <button onClick={handleOpenPasswordModal}>Alterar password</button>
                         <button>Alterar email</button>
                     </div>
                 </div>
@@ -168,6 +187,30 @@ const EditProfile = () => {
                                     Novo username
                                 </label>
                                 <input type="text" id="new-username" value={newUsername} onChange={(e) => setNewUsername(e.target.value)} />
+                                <button type="submit">Alterar</button>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        )}
+
+        {showPasswordModal && (
+            <div className="modal-password">
+                <div className="modal-password-content">
+                    <div className="modal-password-header">
+                        <div className="ghost"></div>
+                        <h3>Altere a sua <span>password</span></h3>
+                        <div className="modal-btn-close">
+                            <button onClick={handleClosePasswordModal} type="button"><AiOutlineClose /></button>
+                        </div>
+                    </div>
+
+                    <div className="modal-password-container">
+                            <form onSubmit={handlePasswordSubmit}>
+                                <label htmlFor="new-password">
+                                    Nova password
+                                </label>
+                                <input type="password" id="new-password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
                                 <button type="submit">Alterar</button>
                             </form>
                         </div>
