@@ -35,9 +35,8 @@ const EditProfile = () => {
                 <div className="app__cms-perfil">
 
                     <div className="app__cms-p-header">
-                        <h2>Perfil</h2>
-                        <span />
-                        <h2>Gabriel</h2>
+                        <h2>Perfil de: <span> Gabriel</span></h2> 
+
                     </div>
                     
                     <div className="app__cms-p-img">
