@@ -8,6 +8,8 @@ import './EditProfile.css';
 const EditProfile = () => {
     const [showModal, setShowModal] = useState(false);
     const [selectedImage, setSelectedImage] = useState(localStorage.getItem('selectedImage') || null);
+    const [newUsername, setNewUsername] = useState("");
+    const [showUsernameModal, setShowUsernameModal] = useState(false);
 
     const currentUser = JSON.parse(localStorage.getItem('user'));
 
@@ -28,6 +30,22 @@ const EditProfile = () => {
             localStorage.setItem("selectedImage", selectedImage)
         }
         setShowModal(false);
+    }
+
+    const handleOpenUsernameModal = () => {
+        setShowUsernameModal(true);
+    }
+
+    const handleCloseUsernameModal = () => {
+        setShowUsernameModal(false);
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const updatedUser = { ...currentUser, username: newUsername };
+        localStorage.setItem("user", JSON.stringify(updatedUser));
+        handleCloseUsernameModal();
     }
 
     useEffect(() => {
@@ -83,7 +101,7 @@ const EditProfile = () => {
                     </div>
 
                     <div className="app__cms-p-btns">
-                        <button>Alterar username</button>
+                        <button onClick={handleOpenUsernameModal}>Alterar username</button>
                         <button>Alterar password</button>
                         <button>Alterar email</button>
                     </div>
@@ -131,6 +149,32 @@ const EditProfile = () => {
                     </div>
                 </div>
             )}
+
+        {showUsernameModal && (
+            <div className="modal-username">
+                <div className="modal-username-content">
+                    <div className="modal-user-header">
+                        <div className="ghost"></div>
+                        <h3>Altere o seu <span>username</span></h3>
+                        <div className="modal-btn-close">
+                            <button onClick={handleCloseUsernameModal} type="button"><AiOutlineClose /></button>
+                        </div>
+                    </div>
+
+                    <div className="modal-user-container">
+                            <form onSubmit={handleSubmit}>
+                                <h4>Username antigo: <span>{currentUser.username}</span></h4>
+                                <label htmlFor="new-username">
+                                    Novo username
+                                </label>
+                                <input type="text" id="new-username" value={newUsername} onChange={(e) => setNewUsername(e.target.value)} />
+                                <button type="submit">Alterar</button>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        )}
+        
 
        </section>
     );
