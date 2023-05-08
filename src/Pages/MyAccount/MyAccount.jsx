@@ -6,6 +6,7 @@ import './MyAccount.css';
 
 import championImages from "../../Constants/championImages";
 import images from "../../Constants/images";
+import { NavLink } from "react-router-dom";
 
 /* 
 DOCUMENTAÇÃO DE CÓDIGO - CRIAÇÃO DE MODAL 
@@ -69,7 +70,8 @@ const MyAccount = () => {
                     )}
                     
                     <button onClick={handleChooseImageClick}>Escolher nova imagem</button>
-                    <button>Editar Perfil</button>
+
+                    <NavLink className="app__editar-link" to="/editar-perfil">Editar Perfil</NavLink>
                 </div>
 
                 <div className="app__profile-user">
@@ -118,7 +120,7 @@ const MyAccount = () => {
                     </div>
 
                     <div className="app__view-guides">
-                        <button>Ver todos os guias</button>
+                        <button>Ver todos os meus guias</button>
                         <button>Criar guia</button>
                     </div>
                     
