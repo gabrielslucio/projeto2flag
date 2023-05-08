@@ -15,6 +15,7 @@ import ScrollTop from './Functions/ScrollTop/ScrollTop';
 import CreateAccount from './Pages/CreateAccount/CreateAccount';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import MyAccount from './Pages/MyAccount/MyAccount';
+import EditProfile from './Pages/EditProfile/EditProfile';
 
 function App() {
   
@@ -58,6 +59,7 @@ function App() {
           <Route path="/criar-conta" element={<CreateAccount />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/minha-conta" element={<> <Navbar /> <MyAccount /> </>} />
+          <Route path="/editar-perfil" element={<> <Navbar /> <EditProfile /> </>} />
         </Routes>      
     </div>
     </BrowserRouter>
