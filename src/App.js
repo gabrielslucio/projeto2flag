@@ -17,6 +17,7 @@ import LoginPage from './Pages/LoginPage/LoginPage';
 import MyAccount from './Pages/MyAccount/MyAccount';
 import EditProfile from './Pages/EditProfile/EditProfile';
 import EditGuides from './Pages/EditGuides/EditGuides';
+import EditComments from './Pages/EditComments/EditComments';
 
 function App() {
   
@@ -62,6 +63,7 @@ function App() {
           <Route path="/minha-conta" element={<> <Navbar /> <MyAccount /> </>} />
           <Route path="/editar-perfil" element={<> <Navbar /> <EditProfile /> </>} />
           <Route path="/editar-perfil-guias" element={<> <Navbar /> <EditGuides /> </>} />
+          <Route path="/editar-perfil-comentarios" element={<> <Navbar /> <EditComments /> </>} />
         </Routes>      
     </div>
     </BrowserRouter>
