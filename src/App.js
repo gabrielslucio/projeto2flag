@@ -16,6 +16,7 @@ import CreateAccount from './Pages/CreateAccount/CreateAccount';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import MyAccount from './Pages/MyAccount/MyAccount';
 import EditProfile from './Pages/EditProfile/EditProfile';
+import EditGuides from './Pages/EditGuides/EditGuides';
 
 function App() {
   
@@ -60,6 +61,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/minha-conta" element={<> <Navbar /> <MyAccount /> </>} />
           <Route path="/editar-perfil" element={<> <Navbar /> <EditProfile /> </>} />
+          <Route path="/editar-perfil-guias" element={<> <Navbar /> <EditGuides /> </>} />
         </Routes>      
     </div>
     </BrowserRouter>

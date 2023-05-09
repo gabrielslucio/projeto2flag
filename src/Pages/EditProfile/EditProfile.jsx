@@ -4,6 +4,7 @@ import images from "../../Constants/images";
 import championImages from "../../Constants/championImages";
 
 import './EditProfile.css';
+import { NavLink } from "react-router-dom";
 
 const EditProfile = () => {
     const [showModal, setShowModal] = useState(false);
@@ -81,7 +82,7 @@ const EditProfile = () => {
     const handleEmailSubmit = (event) => {
         event.preventDefault();
 
-        const updatedEmail = { ...currentEmail, email: newEmail };
+        const updatedEmail = { ...currentEmail, emailnpm : newEmail };
         localStorage.setItem("user", JSON.stringify(updatedEmail));
         handleCloseEmailModal();
     }
@@ -101,27 +102,23 @@ const EditProfile = () => {
                 </div>
 
                 <div className="app__cms-p">
-                    <a href="">Perfil</a>
+                    <NavLink to="/editar-perfil">Perfil</NavLink>
                 </div>
 
                 <div className="app__cms-g">
-                    <a href="">Guias</a>
+                    <NavLink to="/editar-perfil-guias">Guias</NavLink>
                 </div>
 
                 <div className="app__cms-c">
-
-                    <a href="">Comentários</a>
+                    <NavLink to="/editar-perfil-comentarios">Comentários</NavLink>
                 </div>
                 
             </div>
 
             <div className="app__cms-menu">
-
                 <div className="app__cms-perfil">
-
                     <div className="app__cms-p-header">
                         <h2>Perfil de: <span> {currentUser.username}</span></h2> 
-
                     </div>
                     
                     <div className="app__cms-p-img">

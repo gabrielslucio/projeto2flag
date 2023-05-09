@@ -89,11 +89,17 @@
                     z-index: 1;
                     }
                
-                    a:hover {
-                        border: 1px solid #FF4655;
-                        color: white;
-                        background-position: 40%;
-                    }
+                a:hover {
+                    border: 1px solid #FF4655;
+                    color: white;
+                    background-position: 40%;
+                }
+
+                .active {
+                    border: 1px solid #FF4655;
+                    color: white;
+                    background-position: 40%;
+                }
 
             }
 

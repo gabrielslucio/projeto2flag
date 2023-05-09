@@ -120,7 +120,7 @@ const MyAccount = () => {
                     </div>
 
                     <div className="app__view-guides">
-                        <button>Ver todos os meus guias</button>
+                        <NavLink to="/editar-perfil-guias">Ver todos os meus guias</NavLink>
                         <button>Criar guia</button>
                     </div>
                     
