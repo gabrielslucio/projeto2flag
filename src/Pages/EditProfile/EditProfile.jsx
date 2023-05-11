@@ -11,13 +11,15 @@ const EditProfile = () => {
     const [selectedImage, setSelectedImage] = useState(localStorage.getItem('selectedImage') || null);
     const [newUsername, setNewUsername] = useState("");
     const [showUsernameModal, setShowUsernameModal] = useState(false);
+    const [oldPassword, setOldPassword] = useState("");
     const [newPassword, setNewPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
     const [showPasswordModal, setShowPasswordModal] = useState(false);
     const [newEmail, setNewEmail] = useState("");
     const [showEmailModal, setShowEmailModal] = useState(false);
 
     const currentUser = JSON.parse(localStorage.getItem('user'));
-    const currentPassword = JSON.parse(localStorage.getItem('user'));
+    //const currentPassword = JSON.parse(localStorage.getItem('user'));
     const currentEmail = JSON.parse(localStorage.getItem('user'));
 
     const handleChooseImageClick = () => {
@@ -74,9 +76,28 @@ const EditProfile = () => {
     const handlePasswordSubmit = (event) => {
         event.preventDefault();
 
-        const updatedPassword = { ...currentPassword, password: newPassword };
-        localStorage.setItem("user", JSON.stringify(updatedPassword));
-        handleClosePasswordModal();
+        const user = JSON.parse(localStorage.getItem("user"));
+
+        if (oldPassword !== user.password) {
+            alert("A password antiga está errada.");
+            return;
+        }
+
+        if (newPassword !== confirmPassword) {
+            alert("As passwords inseridas não são iguais");
+            return;
+        }
+
+        user.password = newPassword;
+
+       localStorage.setItem("user", JSON.stringify(user));
+
+       setOldPassword("");
+       setNewPassword("");
+       setConfirmPassword("");
+       handleClosePasswordModal(); 
+
+       alert("Password alterada com sucesso");
     }
 
     const handleEmailSubmit = (event) => {
@@ -223,10 +244,33 @@ const EditProfile = () => {
 
                     <div className="modal-password-container">
                             <form onSubmit={handlePasswordSubmit}>
-                                <label htmlFor="new-password">
-                                    Nova password
+                                <label htmlFor="old-password">
+                                    Inserir password antiga
                                 </label>
-                                <input type="password" id="new-password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
+                                <input 
+                                    type="password" 
+                                    id="old-password" 
+                                    value={oldPassword}
+                                    onChange={(e) => setOldPassword(e.target.value)}
+                                    required />
+                                <label htmlFor="new-password">
+                                    Inserir nova password
+                                </label>
+                                <input 
+                                    type="password" 
+                                    id="new-password" 
+                                    value={newPassword} 
+                                    onChange={(e) => setNewPassword(e.target.value)} required/>
+                                <label htmlFor="confirm-password">
+                                    Confirmar nova password
+                                </label>
+                                <input 
+                                    type="password" 
+                                    id="confirm-password" 
+                                    value={confirmPassword}
+                                    onChange={(e) => setConfirmPassword(e.target.value)}
+                                    required
+                                />
                                 <button type="submit">Alterar</button>
                             </form>
                         </div>

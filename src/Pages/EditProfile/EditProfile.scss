@@ -668,7 +668,7 @@
         .modal-password-content {
             
          width: 30%;
-         height: 500px;   
+         height: 650px;   
             
          border: 1px solid #315375;
          background-color: #101b25;
@@ -751,7 +751,7 @@
                 gap: 40px;
 
                 label {
-                    width: 100%;
+                    width: 400px;
                     color: #fff;
                    
      
@@ -759,6 +759,8 @@
                     font-size: 1.2rem;
                     text-transform: uppercase;
                     letter-spacing: 0.2rem;
+
+                    text-align: center;
      
                     display: flex;
                     justify-content: center;
