@@ -6,6 +6,7 @@ import championImages from "../../Constants/championImages";
 import {BsFillArrowUpCircleFill, BsFillArrowDownCircleFill, BsEyeFill, BsChatDotsFill} from "react-icons/bs"
 
 import './ChampionPage.css';
+import ChampionAatrox from "../ChampionAatrox/ChampionAatrox";
 
 const ChampionPage = () => {
     //useParams para obter o id do URL
@@ -20,6 +21,8 @@ const ChampionPage = () => {
     // obtém o nome do campeão
     const championName = champion.data[Object.keys(champion.data)[index]].name;
 
+    const showGuide = championId === 'aatrox';
+
 
     return (
         
@@ -33,6 +36,8 @@ const ChampionPage = () => {
                 </div>
             </div>
             </div>
+
+            {showGuide && <ChampionAatrox />}
             
         </section>
     );
